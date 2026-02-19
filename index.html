@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zixu Wang — Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Portfolio website: projects, resume, and contact." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#121a24; --text:#e7eef7; --muted:#a9b6c6;
+      --accent:#6ee7ff; --border:#233044;
+      --max: 1080px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 800px at 20% 10%, #102033 0%, var(--bg) 55%);
+      color:var(--text); line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      display:flex; gap:18px; align-items:center; justify-content:space-between;
+      padding:18px 20px; border:1px solid var(--border); border-radius:18px;
+      background: rgba(18,26,36,.75); backdrop-filter: blur(8px);
+      position: sticky; top: 16px; z-index: 10;
+    }
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{
+      width:40px;height:40px;border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      box-shadow: 0 10px 30px rgba(110,231,255,.15);
+    }
+    nav a{margin-left:14px; color:var(--muted)}
+    nav a:hover{color:var(--text)}
+    .hero{
+      margin-top:22px; padding:34px 22px;
+      border:1px solid var(--border); border-radius:22px;
+      background: rgba(18,26,36,.6);
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:22px;
+    }
+    .hero h1{margin:0 0 8px; font-size:38px; line-height:1.15}
+    .hero p{margin:0 0 16px; color:var(--muted)}
+    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 22px}
+    .pill{
+      padding:8px 12px; border:1px solid var(--border); border-radius:999px;
+      color:var(--muted); font-size:14px; background: rgba(11,15,20,.35);
+    }
+    .btnrow{display:flex; flex-wrap:wrap; gap:12px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:12px; border:1px solid var(--border);
+      background: rgba(11,15,20,.5); color:var(--text); font-weight:600;
+    }
+    .btn.primary{
+      border-color: rgba(110,231,255,.45);
+      background: linear-gradient(135deg, rgba(110,231,255,.18), rgba(139,92,246,.12));
+    }
+    .card{
+      border:1px solid var(--border); border-radius:18px;
+      background: rgba(18,26,36,.55); padding:18px;
+    }
+    .grid{display:grid; gap:16px}
+    .grid.projects{grid-template-columns: repeat(3, 1fr)}
+    .muted{color:var(--muted)}
+    h2{margin:28px 0 12px; font-size:22px}
+    .proj h3{margin:6px 0 6px; font-size:18px}
+    .proj p{margin:0; color:var(--muted); font-size:14px}
+    .tagrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .tag{font-size:12px; color:var(--muted); border:1px solid var(--border);
+      padding:5px 9px; border-radius:999px; background: rgba(11,15,20,.35)}
+    footer{margin:34px 0 10px; color:var(--muted); font-size:14px}
+    .split{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr}
+      .grid.projects{grid-template-columns: 1fr}
+      .split{grid-template-columns: 1fr}
+      .hero h1{font-size:32px}
+    }
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:800;">Zixu Wang</div>
+          <div class="muted small">Mechanical Engineering • UB (May 2026)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Build. Test. Iterate.</h1>
+        <p>
+          I’m a Mechanical Engineering student focused on vehicle systems, CAD/FEA, and embedded controls.
+          This site highlights the projects I’ve built and the skills I bring to engineering teams.
+        </p>
+
+        <div class="pillrow">
+          <span class="pill">SolidWorks (CAD / Drawings / GD&T)</span>
+          <span class="pill">FEA + DFM</span>
+          <span class="pill">Arduino / Sensors / PWM</span>
+          <span class="pill">MATLAB (Dynamics / Modeling)</span>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+          <a class="btn" href="#" onclick="alert('Replace this with your resume PDF link.'); return false;">Download Resume</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="font-weight:800; margin-bottom:6px;">Currently</div>
+        <div class="muted">
+          • Building an autonomous RC car platform (controls + sensor filtering)<br/>
+          • Designing components with manufacturability & testing in mind<br/>
+          • Preparing for internships after <b>May 20</b> (exam season)
+        </div>
+        <div style="height:14px"></div>
+        <div style="font-weight:800; margin-bottom:6px;">What I care about</div>
+        <div class="muted">Reliable hardware, clean interfaces, and real-world validation.</div>
+      </div>
+    </section>
+
+    <h2 id="projects">Projects</h2>
+    <div class="grid projects">
+      <div class="card proj">
+        <div class="muted small">Embedded Systems & Controls</div>
+        <h3>Autonomous RC Car</h3>
+        <p>
+          Arduino + ultrasonic sensing, ESC/servo override, lane/obstacle logic, and chassis modifications.
+        </p>
+        <div class="tagrow">
+          <span class="tag">Arduino</span><span class="tag">Sensors</span><span class="tag">Controls</span><span class="tag">Testing</span>
+        </div>
+      </div>
+
+      <div class="card proj">
+        <div class="muted small">CAD / DFM</div>
+        <h3>Custom Mechanical Assemblies</h3>
+        <p>
+          CAD modeling, drawings, tolerance thinking, and design iteration for real constraints.
+        </p>
+        <div class="tagrow">
+          <span class="tag">SolidWorks</span><span class="tag">GD&T</span><span class="tag">DFM</span>
+        </div>
+      </div>
+
+      <div class="card proj">
+        <div class="muted small">Modeling</div>
+        <h3>Vehicle Dynamics Sim</h3>
+        <p>
+          MATLAB-based dynamics modeling (handling, load transfer, and design trade studies).
+        </p>
+        <div class="tagrow">
+          <span class="tag">MATLAB</span><span class="tag">Dynamics</span><span class="tag">Optimization</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="resume">Resume</h2>
+    <div class="split">
+      <div class="card">
+        <div style="font-weight:800; margin-bottom:8px;">Skills</div>
+        <div class="muted">
+          • CAD: SolidWorks (parts/assemblies/drawings)<br/>
+          • Analysis: FEA fundamentals, loads, material selection<br/>
+          • Controls: PWM, sensors, servo/ESC integration<br/>
+          • Tools: MATLAB, Excel, basic prototyping & testing
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-weight:800; margin-bottom:8px;">Experience highlights</div>
+        <div class="muted">
+          Add 3–5 bullets here that match the roles you’re applying for.
+          Keep them measurable (time saved, accuracy improved, tests completed).
+        </div>
+      </div>
+    </div>
+
+    <h2 id="contact">Contact</h2>
+    <div class="card">
+      <div class="muted">
+        Email: <a href="mailto:yourname@email.com">yourname@email.com</a><br/>
+        LinkedIn: <a href="#" onclick="alert('Replace with your LinkedIn link.'); return false;">your-linkedin</a><br/>
+        GitHub: <a href="#" onclick="alert('Replace with your GitHub link.'); return false;">your-github</a>
+      </div>
+      <div class="muted small" style="margin-top:10px;">
+        Tip: Put your resume PDF in this folder and link it above (e.g., <code>resume.pdf</code>).
+      </div>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Zixu Wang • Built with plain HTML/CSS
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
