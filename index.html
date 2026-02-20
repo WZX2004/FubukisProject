@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zixu Wang — Mechanical Engineering Portfolio</title>
-  <meta name="description" content="Portfolio website: projects, resume, and contact." />
+  <meta name="description" content="Mechanical Engineering portfolio: CAD (SolidWorks), vehicle systems, embedded controls (Arduino), and MATLAB modeling." />
   <style>
     :root{
       --bg:#0b0f14; --card:#121a24; --text:#e7eef7; --muted:#a9b6c6;
@@ -72,6 +72,8 @@
       padding:5px 9px; border-radius:999px; background: rgba(11,15,20,.35)}
     footer{margin:34px 0 10px; color:var(--muted); font-size:14px}
     .split{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    ul{margin:10px 0 0 18px; padding:0}
+    li{margin:6px 0; color:var(--muted)}
     @media (max-width: 900px){
       .hero{grid-template-columns: 1fr}
       .grid.projects{grid-template-columns: 1fr}
@@ -88,7 +90,7 @@
         <div class="logo" aria-hidden="true"></div>
         <div>
           <div style="font-weight:800;">Zixu Wang</div>
-          <div class="muted small">Mechanical Engineering • UB (May 2026)</div>
+          <div class="muted small">Mechanical Engineering • University at Buffalo (SUNY) • May 2026</div>
         </div>
       </div>
       <nav>
@@ -103,20 +105,21 @@
         <h1>Build. Test. Iterate.</h1>
         <p>
           I’m a Mechanical Engineering student focused on vehicle systems, CAD/FEA, and embedded controls.
-          This site highlights the projects I’ve built and the skills I bring to engineering teams.
+          I like projects where hardware meets real testing and clean engineering communication.
         </p>
 
         <div class="pillrow">
           <span class="pill">SolidWorks (CAD / Drawings / GD&T)</span>
-          <span class="pill">FEA + DFM</span>
-          <span class="pill">Arduino / Sensors / PWM</span>
+          <span class="pill">DFM / Tolerance Thinking</span>
+          <span class="pill">Arduino / Sensors / ESC + Servo</span>
           <span class="pill">MATLAB (Dynamics / Modeling)</span>
         </div>
 
         <div class="btnrow">
           <a class="btn primary" href="#projects">View Projects</a>
           <a class="btn" href="#contact">Get in Touch</a>
-          <a class="btn" href="#" onclick="alert('Replace this with your resume PDF link.'); return false;">Download Resume</a>
+          <!-- Put resume.pdf in the repo root and this will work -->
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
         </div>
       </div>
 
@@ -124,23 +127,29 @@
         <div style="font-weight:800; margin-bottom:6px;">Currently</div>
         <div class="muted">
           • Building an autonomous RC car platform (controls + sensor filtering)<br/>
-          • Designing components with manufacturability & testing in mind<br/>
-          • Preparing for internships after <b>May 20</b> (exam season)
+          • Designing parts with manufacturability and test validation in mind<br/>
+          • Open to internships / co-ops after May 20 (post-exams)
         </div>
         <div style="height:14px"></div>
         <div style="font-weight:800; margin-bottom:6px;">What I care about</div>
-        <div class="muted">Reliable hardware, clean interfaces, and real-world validation.</div>
+        <div class="muted">Reliable hardware, clean interfaces, and measurable performance improvements.</div>
       </div>
     </section>
 
     <h2 id="projects">Projects</h2>
     <div class="grid projects">
+
       <div class="card proj">
         <div class="muted small">Embedded Systems & Controls</div>
-        <h3>Autonomous RC Car</h3>
+        <h3>Autonomous RC Car (Arduino)</h3>
         <p>
-          Arduino + ultrasonic sensing, ESC/servo override, lane/obstacle logic, and chassis modifications.
+          Self-driving RC car using Arduino, ultrasonic sensing, and ESC/servo override with test-driven tuning.
         </p>
+        <ul>
+          <li>Implemented obstacle-avoidance + lane-following style logic and validated behavior through testing.</li>
+          <li>Added filtering to reduce ultrasonic multipath effects (improved stability, with some accuracy tradeoff).</li>
+          <li>Designed CAD chassis modifications to mount electronics cleanly and robustly.</li>
+        </ul>
         <div class="tagrow">
           <span class="tag">Arduino</span><span class="tag">Sensors</span><span class="tag">Controls</span><span class="tag">Testing</span>
         </div>
@@ -148,10 +157,15 @@
 
       <div class="card proj">
         <div class="muted small">CAD / DFM</div>
-        <h3>Custom Mechanical Assemblies</h3>
+        <h3>Mechanical Design (SolidWorks)</h3>
         <p>
-          CAD modeling, drawings, tolerance thinking, and design iteration for real constraints.
+          CAD modeling + drawings with manufacturing constraints: fits, interfaces, tolerances, and assembly logic.
         </p>
+        <ul>
+          <li>Created detailed part/assembly drawings and improved design clarity with consistent dimensioning.</li>
+          <li>Applied DFM thinking (fastener standardization, simplified geometry, print-friendly features).</li>
+          <li>Iterated designs based on real fabrication feedback (print/fit issues → design updates).</li>
+        </ul>
         <div class="tagrow">
           <span class="tag">SolidWorks</span><span class="tag">GD&T</span><span class="tag">DFM</span>
         </div>
@@ -159,14 +173,20 @@
 
       <div class="card proj">
         <div class="muted small">Modeling</div>
-        <h3>Vehicle Dynamics Sim</h3>
+        <h3>Vehicle Dynamics Modeling (MATLAB)</h3>
         <p>
-          MATLAB-based dynamics modeling (handling, load transfer, and design trade studies).
+          MATLAB-based modeling for dynamics concepts and design trade studies (handling, load transfer, tuning).
         </p>
+        <ul>
+          <li>Built scripts for parameter sweeps and compared outcomes across setups.</li>
+          <li>Used plots + clear assumptions to communicate results (not just equations).</li>
+          <li>Connected modeling decisions to real vehicle behavior and constraints.</li>
+        </ul>
         <div class="tagrow">
-          <span class="tag">MATLAB</span><span class="tag">Dynamics</span><span class="tag">Optimization</span>
+          <span class="tag">MATLAB</span><span class="tag">Dynamics</span><span class="tag">Modeling</span>
         </div>
       </div>
+
     </div>
 
     <h2 id="resume">Resume</h2>
@@ -174,17 +194,17 @@
       <div class="card">
         <div style="font-weight:800; margin-bottom:8px;">Skills</div>
         <div class="muted">
-          • CAD: SolidWorks (parts/assemblies/drawings)<br/>
-          • Analysis: FEA fundamentals, loads, material selection<br/>
-          • Controls: PWM, sensors, servo/ESC integration<br/>
-          • Tools: MATLAB, Excel, basic prototyping & testing
+          • CAD: SolidWorks (parts/assemblies/drawings), basic GD&T<br/>
+          • Engineering: loads, materials basics, DFM, iterative prototyping<br/>
+          • Embedded: PWM, sensors, servo/ESC integration, debugging<br/>
+          • Modeling: MATLAB for dynamics and trade studies
         </div>
       </div>
       <div class="card">
-        <div style="font-weight:800; margin-bottom:8px;">Experience highlights</div>
+        <div style="font-weight:800; margin-bottom:8px;">What I’m looking for</div>
         <div class="muted">
-          Add 3–5 bullets here that match the roles you’re applying for.
-          Keep them measurable (time saved, accuracy improved, tests completed).
+          Internships/co-ops involving mechanical design, test/validation, vehicle systems, or mechatronics.
+          I can start after May 20.
         </div>
       </div>
     </div>
@@ -192,17 +212,17 @@
     <h2 id="contact">Contact</h2>
     <div class="card">
       <div class="muted">
-        Email: <a href="mailto:yourname@email.com">yourname@email.com</a><br/>
-        LinkedIn: <a href="#" onclick="alert('Replace with your LinkedIn link.'); return false;">your-linkedin</a><br/>
-        GitHub: <a href="#" onclick="alert('Replace with your GitHub link.'); return false;">your-github</a>
+        Email: <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a><br/>
+        LinkedIn: <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener">YOUR_LINKEDIN_URL</a><br/>
+        GitHub: <a href="https://github.com/WZX2004" target="_blank" rel="noopener">github.com/WZX2004</a>
       </div>
       <div class="muted small" style="margin-top:10px;">
-        Tip: Put your resume PDF in this folder and link it above (e.g., <code>resume.pdf</code>).
+        Put your resume PDF in this repo as <code>resume.pdf</code> so the “Download Resume” button works.
       </div>
     </div>
 
     <footer>
-      © <span id="y"></span> Zixu Wang • Built with plain HTML/CSS
+      © <span id="y"></span> Zixu Wang • Built with plain HTML/CSS • Hosted on GitHub Pages
     </footer>
   </div>
 
